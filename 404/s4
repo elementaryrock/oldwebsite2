@@ -1,0 +1,121 @@
+.videoSeek {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(0, rgba(17,23,29,.4) 0%, transparent 100%);
+    color: white;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .soundButton {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 24px;
+    cursor: pointer;
+  }
+
+  .soundOnSvg,
+  .soundMutedSvg {
+    color: white;
+  }
+  
+  .soundMutedSvg {
+    display: none;
+  }
+
+  .videoSeekBarContainer {
+    position: relative;
+    flex-grow: 1;
+  }
+
+  .videoSeekBar {
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 22px;
+    right: 22px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+  }
+
+  .videoSeekBarCurrent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: white;
+    border-radius: 4px;
+  }
+
+  .videoSeekInput {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 16px 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    direction: ltr;
+  }
+
+  .videoSeekInput:hover {
+    cursor: pointer;
+  }
+
+  .videoSeekInput:active {
+    cursor: grabbing;
+  }
+
+  /* chrome, safari */
+  .videoSeekInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 14px solid transparent;
+    border-radius: 100%;
+    background-clip: content-box;
+    background-color: white;
+    filter: drop-shadow(0 0 1px black);
+    opacity: 1;
+  }
+
+  .videoSeekInput:active::-webkit-slider-thumb {
+    transform: scale(1.25);
+  }
+
+  /* firefox */
+  .videoSeekInput::-moz-focus-outer {
+    border: none;
+  }
+
+  .videoSeekInput::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 14px solid transparent;
+    border-radius: 100%;
+    background-clip: content-box;
+    background-color: white;
+    filter: drop-shadow(0 0 1px black);
+    opacity: 1;
+  }
+
+  .videoSeekInput:active::-moz-range-thumb {
+    transform: scale(1.25);
+  }
